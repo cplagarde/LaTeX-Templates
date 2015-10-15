@@ -1,0 +1,360 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{dtklogos}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{caption}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\usepackage[document]{ragged2e}    %This causes text to left align
+\usepackage[colorlinks=true, linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+\bibliographystyle{IEEEtran}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{MCHE 220: Report Template}
+
+\begin{document}
+\lefthyphenmin3
+\righthyphenmin4
+% \pretolerance=2000
+% \tolerance=500 
+% \emergencystretch=10pt
+%\raggedright     %Stops LaTeX from automatically hyphenating the right margin to fit better
+%Combine this with \usepackage[document]{ragged2e} to get a text align left similar to natural MS Word
+%-------------------------------------------------------------
+%Header
+%-------------------------------------------------------------
+\fancyhf{} 	
+	\renewcommand{\headrulewidth}{0pt}
+ 	\fancypagestyle{plain}{
+  	\fancyhead[R]{\thepage}} 
+  	\pagestyle{plain}
+    
+\captionsetup[table]{labelsep=space}
+
+\begin{flushleft}
+\hrulefill\\\hrule height 1pt
+\vspace{5pt}
+\textbf{TO: }Dr. Emblom  \hfill   \textbf{DATE: }\today                
+\bigskip\\
+\textbf{FROM: }Chandler Lagarde	
+\bigskip\\
+\textbf{COPY: }N/A
+\bigskip\\
+\textbf{RE: }MCHE 220 Lab 1
+\vspace{-10pt}
+\end{flushleft}
+\hrulefill \hrule height 1pt
+
+%-------------------------------------------------------------
+%Start of Paper
+%-------------------------------------------------------------
+
+\section*{\fontsize{12}{12}\selectfont INTRODUCTION}
+This technical memorandum is being submitted to Dr. Emblom to exemplify the results of a laboratory performed compression test and the data that resulted from it. The compression test was performed with a one inch length and one inch diameter sample of AL-1100-O, which is commercially pure aluminum that had been annealed \cite{Holt}. This memorandum serves the purpose to fulfill the request made by Dr. Emblom at the University of Louisiana at Lafayette for MCHE 220: Mechanics of Materials Lab.
+\bigskip
+
+The basics of mechanics of materials are implemented with the experimental data found from the compression test. To perform an analysis, the stress and strain are some of the results that need to be found. With all the data and results within a data table, plots can be formulated for easier visibility and understanding. With a visualized understanding of the analysis, implications and conclusions can be found.
+\bigskip
+
+
+
+
+
+\section*{\fontsize{12}{12}\selectfont BACKGROUND}
+To perform the analysis of the compression test, there are a few equations and methods that have to be utilized. These equations and technical principles are based on the basic knowledge of mechanics of materials. Since compression causes stress and strain on an object, stress and strain analysis of the aluminum would be the most useful data. With data values of the force taken from the experiment at increasingly random intervals, and the length measured at each of these values, a thorough analysis of the aluminum compression can be completed. One of the most important aspects of the analysis is that there is a big difference between engineering stress and engineering strain versus the true stress and true strain. 
+\bigskip
+
+The engineering strain (1), or the normal strain, is defined by a change in length of a line per unit length, or the deformation \cite{Hibbeler}. The original length of the sample is subtracted by the current length, then that is divided by the current length. Strain is found by dividing a length by a length, therefore, it is a unitless dimension. This equation is the absolute value of the engineering strain because it is the same value, but it would be easier to graph.
+
+\bigskip
+\begin{equation}
+\epsilon = \left | \frac{l_{o}-l}{l_{o}} \right |
+\end{equation}
+\bigskip
+
+This equation is called the engineering stress (2). The current force, F, is divided by the original cross-sectional area, Ao, to obtain the engineering stress. 
+\bigskip
+
+\begin{equation}
+\sigma = \frac{F}{A_{o}}
+\end{equation}
+\bigskip
+
+This is the absolute value of the true strain (3), which is the instantaneous rate of increase in the gauge length \cite{TrueStrain}. The natural log of the length, l, divided by the original length, lo, is the equation used to obtain the true strain. 
+\bigskip
+
+\begin{equation}
+\phi = \left | ln\frac{l}{l_{o}} \right |
+\end{equation}
+\bigskip
+
+Force, F, divided by the current cross-sectional area, A, is the true stress (4). This is otherwise known as the normal stress, which is the intensity of the force acting on the normal area \cite{Hibbeler}.
+\bigskip
+
+\begin{equation}
+\sigma = \frac {F}{A}
+\end{equation}
+\bigskip
+
+
+
+To perform this compression test, a 60-Ton Baldwin Press was used. The model used is shown in Figure 1. 
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[scale=0.15]{Press.JPG}
+% \caption{The 60-Ton Baldwin Press used to perform the compression test}
+% \label{Figure 1}
+% \end{center}
+% \vspace{-0.2in}
+% \end{figure}
+% \bigskip
+
+
+
+
+
+\section*{\fontsize{12}{12}\selectfont PROCEDURE}
+Taking the original measurements of the AL-1100-O sample is the most important step to take first. Without the initial measurements of the aluminum sample, most of the analysis would be impossible to perform. Using calipers would be best for measuring the diameter of the sample, and it would also serve very well for measuring the length of the aluminum as well. 
+\bigskip
+
+After applying oil to the top and bottom of the aluminum cylinder, safely placing it into the compression machine was the next step. Set the machine close to the cylinder, and run the compression software to a certain force. Wait patiently and from a safe distance, and then stop the program when it reaches the necessary force. To measure the length of the cylinder at this point is to either: operate the machine to safely remove the cylinder from the plate and measure the cylinder’s length, or take the measurements from the program or a ruler next to the machine.
+\bigskip
+
+Repeating the process for increasing intervals of force, record the data until sufficient accuracy is acquired. From the experimental data, equations can be used to find the stress and strain of the aluminum sample, and an analysis can be performed accordingly. Shown in Figure 2, there are two fully compressed aluminum samples. The left one is compressed slowly over time, while the right one is compressed quite a bit faster. 
+\bigskip
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[scale=0.075]{Aluminum.jpg}
+% \caption{Fully compressed aluminum samples}
+% \label{Figure 2}
+% \end{center}
+% \vspace{-0.2in}
+% \end{figure}
+% \bigskip
+
+
+
+
+
+
+\section*{\fontsize{12}{12}\selectfont RESLTS AND DISCUSSION}
+From the experimental data acquired, a stress-strain analysis can be very useful in determining how the aluminum will perform in an actual system. Before plotting the results into graphs, utilizing the equations for stress and strain, Table 1, found in the appendix, can be formed to show the given results in SI units.
+\bigskip
+
+
+\newpage
+
+
+
+
+A plot is made to show the Force versus Displacement in Figure 3. The highest correlation coefficient for the original curve would be a third order polynomial, and it matches the original curve quite well. This relationship should probably be referred to as logarithmic or polynomial, not linear. 
+\bigskip
+
+% \makeatletter                     %Forces picture to
+% \setlength{\@fptop}{0pt}          %the ultimate top of
+% \makeatother                      %the page
+
+
+
+% \begin{figure}[!ht]
+% \begin{center}
+% \includegraphics[scale=0.875]{Figure3.png}
+% \caption{The force, in kilonewtons, versus the displacement, in millimeters. The markers for the data points are shown. A third order polynomial trendline describes the graph best, as shown by the equation and correlation coefficient.}
+% \label{Figure 3}
+% \end{center}
+% \vspace{-0.2in}
+% \end{figure}
+% \bigskip
+% \bigskip
+
+\clearpage
+
+The stress-strain analysis, a comparison was made to differentiate the engineering stress and strain to the true stress and strain. This is shown in Figure 4, in a log-log graph format. As seen below, the engineering stress-strain has an exponential curvature, and the true stress-strain has a linear curvature. In a log-log graph, it is easier to see the curve of the line compared to the line with a regular graph. This graph also displays that the curves are nearly identical with strains less than 0.1. 
+\bigskip
+
+% \begin{figure}[!ht]
+% \begin{center}
+% \includegraphics[scale=0.65]{Figure4.png}
+% \caption{A stress-strain plot showing both engineering and true stress-strain.}
+% \label{Figure 4}
+% \end{center}
+% \vspace{-0.2in}
+% \end{figure}
+% \bigskip
+% \bigskip
+
+\newpage
+
+Finally, making a stress-strain log-log graph of only the true stress and true strain, with trendlines, is shown in Figure 5. The linear trendline’s correlation coefficient is the highest. But, the power trendline is very close and crosses the most data points more accurately, so the curve can be described best by the power rule.
+\bigskip
+
+% \begin{figure}[!ht]
+% \begin{center}
+% \includegraphics[scale=0.85]{Figure5.png}
+% \caption{The true stress-strain curve. Stress is represented in MegaPascals and strain is unitless. The markers for the data points are shown. The equations and correlation coefficients are shown for their respective trendlines.}
+% \label{Figure 5}
+% \end{center}
+% \vspace{-0.2in}
+% \end{figure}
+% \bigskip
+
+
+While plotting in a log-log graph, the data points that are defined at zero cannot be used, since the logarithm of zero is undefined. It seems that the engineering stress-strain diagrams are more representative of the elastic range, while the true stress-strain graphs are better used in the plastic range \cite{Roylance,Faridmehr}.
+\bigskip
+
+The power trendline fits the true stress-strain curve best. The calculated equation can be checked with a simple slope formula (5), where B is the slope.
+\begin{equation}
+B = \frac{ln(\sigma_1) - ln(\sigma_2)}{ln(\phi_1) - ln(\phi_2)}
+\end{equation}
+
+\newpage
+
+
+
+
+
+
+\section*{\fontsize{12}{12}\selectfont CONCLUSION}
+The sample of annealed aluminum, AL-1100-O, was put through a compression test. The experimental data was recorded and basic engineering knowledge of mechanics of materials was applied to find the stress and strain results from the recorded data. Tables and plots were synthesized to visibly show the concluded results, and the analysis was conducted. 
+\bigskip
+
+The results seem to be quite reasonable for the compression test procedure. For the given force, the change in length and area are appropriately proportional. The stress and strain are calculated from the analysis of force, length, and area. It is shown in Figure 3 that the force and displacement do not have a linear relationship after the yield point. A comparison between the engineering stress-strain data and the true stress-strain data is shown in Figure 4. Finally, the true stress-strain curve, shown in Figure 5, shows that the power equation best approximates the relationship between true stress and true strain.
+\bigskip
+
+For future work, the compression test could be performed a multitude of times, while recording all of this experimental data. With all the different experimental data, more precise and accurate results would be presented. Alternatively, the test could take more data points than it did before, to get a more accurate relationship for the stress-strain curves. 
+
+
+
+
+
+\section*{\fontsize{12}{12}\selectfont REFERENCES}
+
+\begin{thebibliography}{2}
+
+\bibitem{Holt}
+  Holt, J. M., Mindlin, H., Ho, C. Y., Purdue University, and Center for Information and Numerical Data Analysis and Synthesis, 1997, Structural alloys handbook, CINDAS/Purdue University, West Lafayette, Ind.
+  
+  
+\vspace{-0.15in}  
+\bibitem{Hibbeler}
+  Hibbeler, R. C., 2011, Mechanics of materials, Pearson Prentice Hall, Upper Saddle River, N.J, pp. 20-60.
+  
+
+\vspace{-0.15in}
+\bibitem{TrueStrain}
+  “True Strain” [Online]. Available: http://www.continuummechanics.org/cm/truestrain.html. [Accessed: 13-Sep-2015].
+  
+
+\vspace{-0.15in}
+\bibitem{Roylance}
+  Roylance, D., 2001, “Stress-strain curves,” Mass. Inst. Technol. Study Camb.
+  
+  
+\vspace{-0.15in}
+\bibitem{Faridmehr}
+  Faridmehr, I., Hanim Osman, M., Bin Adnan, A., Farokhi Nejad, A., Hodjati, R., and Amin Azimi, M., 2014, “Correlation between Engineering Stress-Strain and True Stress-Strain Curve,” Am. J. Civ. Eng. Archit., 2(1), pp. 53–59.
+
+
+\end{thebibliography}
+
+
+
+\pagebreak
+
+
+
+\section*{\fontsize{12}{12}\selectfont APPENDIX}
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[scale=0.86]{Table1.png}
+% \end{center}
+% \vspace{-0.2in}
+% \end{figure}
+% \bigskip
+
+
+
+
+
+\end{document}
+----------------------------%TEmplates-------------------------------
+
+-------------------------Figure-----------------------
+
+\begin{figure}[h!]  
+  \centering
+    \includegraphics[width=\linewidth]{**file**}
+    \caption{Docking Station}
+\end{figure}
+
+---------------------------Table-----------------------
+\begin{table}[ht]
+\caption{Nonlinear Model Results} % title of Table
+\centering % used for centering table
+\begin{tabular}{c c c c} % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+Case & Method\#1 & Method\#2 & Method\#3 \\ [0.5ex] % inserts table
+%heading
+\hline % inserts single horizontal line
+1 & 50 & 837 & 970 \\ % inserting body of the table
+2 & 47 & 877 & 230 \\
+3 & 31 & 25 & 415 \\
+4 & 35 & 144 & 2356 \\
+5 & 45 & 300 & 556 \\ [1ex] % [1ex] adds vertical space
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\end{table}
+
+
+
+probably best to insert as an image from excel
+
+\bigskip\\
+\begin{table}[h!]
+  \caption{}
+  \includegraphics[width=\linewidth]{**file**}
+\end{table}
+\bigskip\\
+
+
+
+
+
+-----------------------------Equations------------------------
+-----------------------------Regular
+\begin{equation}
+a = b + c
+\end{equation}
+
+--------------------------------- Multiline
+\begin{multline}
+a = b + c + d + e + f
++ g + h + i + j \\
++ k + l + m + n + o
+\end{multline}
+
+----------------------------------other-----------------------------
+
+equations:
+http://moser-isi.ethz.ch/docs/typeset_equations.pdf
+
+citations:
+http://library.missouri.edu/engineering/about/guides/asme
